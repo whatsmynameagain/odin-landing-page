@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/*lots of redundant hierarchy for now to make it easier to identify stuff, 
+especially with the not-so-good class names */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: Roboto, sans-serif; 
 }
@@ -12,18 +20,20 @@ ul {
     margin: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* pointless? */
     padding: 0px 200px ;
     gap: 100px;
 }
 
-
 .header {
     display: flex;
-    justify-content: space-between; /*probably not*/
+    justify-content: space-between; 
     padding: 16px 0px ;
 }
 
@@ -51,7 +61,7 @@ ul {
     font-weight: 800;
 }
 
-.header .links,
+.header .links a,
 .stuff .text .description,
 .stuff .image-placeholder .text {
     color: #E5E7EB;
@@ -75,27 +85,127 @@ ul {
 }
 
 .header .logo,
-.stuff .text > .title {
+.stuff .text .title {
     color: #F9FAF8;
 }
 
 button {
-    color:#E5E7EB;
     background-color: #3882F6;
+    color:white;
+    border: none;
     border-radius: 8px;
     padding: 8px 32px;
     font-weight: 600;
     align-self: flex-start;
 } 
 
-.stuff .text > button {
+.stuff .text .button {
     border: none;
 }
 
-.signup button {
-    border: 1px white;
+/* random info */
+
+.random {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    gap: 50px;
 }
 
+.random .title {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 600;
+    padding-top: 40px;
+}
+
+.random .container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+}
+
+.random .container .card {
+    max-width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.random .container .card .image {
+    color: white;
+    height: 150px;
+    width: 150px;
+    border: 4px solid #3882F6;
+    border-radius: 16px;
+}
+
+.random .container .card .subtext {
+    color: #1F2937;
+}
+
+/* quote */
+
+.quote {
+    background-color: #E5E7EB;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 200px;
+}
+
+.quote em {
+    font-family: sans-serif; /* lighter weight doesn't work with roboto for whateve reason */
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.quote p {
+    color: #1F2937;
+    font-size: 24px;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+/*sign up */
+
+.signup {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 160px;
+}
+
+.signup .container {
+    background-color: #3882F6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 48px;
+    border-radius: 12px;
+    width: 100%
+}
+
+.signup .container .text .title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.signup .container .text .subtext {
+    font-size: 18px;
+}
+
+.bottom-button { 
+    border: 2px solid white;
+    width: 120px;
+}
 
 
 .footer {
@@ -106,3 +216,4 @@ button {
     padding: 32px;
 
 }
+
